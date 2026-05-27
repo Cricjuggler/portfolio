@@ -1,0 +1,7 @@
+# Local dev / tooling
+.claude/
+.fonts/
+.vercel/
+.DS_Store
+Thumbs.db
+*.log
