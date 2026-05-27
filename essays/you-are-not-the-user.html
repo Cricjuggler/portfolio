@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>You are not the user · Rohan Kumar</title>
+<meta name="description" content="A short essay on the common PM trap of confusing yourself with your users — and how to keep your instincts useful without letting them mislead you." />
+<meta name="author" content="Rohan Kumar" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="You are not the user · Rohan Kumar" />
+<meta property="og:description" content="A common PM trap — confusing yourself with the user — and how to keep your instincts useful without letting them mislead you." />
+<meta property="og:image" content="../assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+<link rel="stylesheet" href="../styles.css" />
+
+<script>
+  (() => {
+    try {
+      const saved = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', saved || 'light');
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html#top" class="nav-brand">
+      <span class="dot"></span>
+      <span>Rohan Kumar</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html#work">01 · Work</a>
+      <a href="../index.html#projects">02 · Projects</a>
+      <a href="../index.html#writing">03 · Writing</a>
+      <a href="../index.html#contact">04 · Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <a class="nav-cta" href="../index.html#contact">Get in touch <span style="font-size:14px">↗</span></a>
+    </div>
+  </div>
+</nav>
+
+<article class="essay">
+  <div class="essay-shell">
+    <a class="essay-back" href="../index.html#writing">← Back to writing</a>
+
+    <header class="essay-header">
+      <div class="essay-eyebrow">Essay · On Product Management</div>
+      <h1 class="essay-title">You are not <em>the user.</em></h1>
+      <div class="essay-meta">
+        <span>May 2026</span>
+        <span>·</span>
+        <span>~3 min read</span>
+        <span>·</span>
+        <span>By Rohan Kumar</span>
+      </div>
+    </header>
+
+    <div class="essay-body">
+      <p>As a Product Manager, I often see a common trap: PMs and even entire teams start believing they <em>are</em> the user.</p>
+
+      <p>At first glance, it feels harmless — after all, empathy is key, right? But confusing yourself with your users can quietly derail your product decisions.</p>
+
+      <h2>Here's why</h2>
+
+      <h3>Bias</h3>
+      <p>You have way more context, assumptions, and internal knowledge than a normal user. This clouds your judgment.</p>
+
+      <h3>Different needs</h3>
+      <p>You might prioritize things users don't care about. What you find "intuitive" could actually be confusing to them.</p>
+
+      <h3>Over-optimization</h3>
+      <p>You might overthink "cool" features that don't actually solve a real user pain.</p>
+
+      <h3>Missed opportunities</h3>
+      <p>Real users often behave irrationally, emotionally, and messily — not like the "logical" PM you are.</p>
+
+      <hr />
+
+      <h2>But here's the nuance</h2>
+
+      <p>Your instincts are still valuable. Being close to the user can be a superpower — <strong>if you stay humble.</strong></p>
+
+      <ul>
+        <li>Use your instincts only to form hypotheses.</li>
+        <li>Always validate them with real user feedback.</li>
+      </ul>
+
+      <blockquote>Ultimately, your job isn't to be the user. It's to be the bridge — between user needs, business goals, and the messy real world.</blockquote>
+
+      <p><strong>Stay curious. Stay grounded.</strong></p>
+    </div>
+
+    <footer class="essay-foot">
+      <span>← <a href="../index.html#writing">More writing</a></span>
+      <span><a href="../index.html#contact">Talk to me ↗</a></span>
+    </footer>
+  </div>
+</article>
+
+<script src="../app.js"></script>
+</body>
+</html>
