@@ -831,16 +831,22 @@ section {
 }
 
 /* ----- Contact ----- */
+/* Local fg/bg vars so the inverted slab works in both themes.
+   Light theme: dark ink slab with cream text.
+   Dark theme:  bg-2 slab with cream text (--ink is cream in dark). */
 .contact {
-  background: var(--ink);
-  color: var(--bg);
+  --contact-bg: var(--ink);
+  --contact-fg: var(--bg);
+  background: var(--contact-bg);
+  color: var(--contact-fg);
 }
 [data-theme="dark"] .contact {
-  background: var(--bg-2);
+  --contact-bg: var(--bg-2);
+  --contact-fg: var(--ink);
 }
-.contact .section-head .label { color: color-mix(in oklab, var(--bg) 60%, transparent); }
+.contact .section-head .label { color: color-mix(in oklab, var(--contact-fg) 60%, transparent); }
 .contact .section-head .label::before { background: var(--accent); }
-.contact h2 { color: var(--bg); }
+.contact h2 { color: var(--contact-fg); }
 
 .contact-cta {
   font-family: var(--serif);
@@ -876,7 +882,7 @@ section {
   gap: 16px;
   align-items: baseline;
   padding: 18px 0;
-  border-top: 1px solid color-mix(in oklab, var(--bg) 18%, transparent);
+  border-top: 1px solid color-mix(in oklab, var(--contact-fg) 18%, transparent);
   font-size: 18px;
   transition: padding-left 0.3s ease, color 0.3s;
 }
@@ -885,7 +891,7 @@ section {
   .contact-link .v { font-size: 18px; }
   .contact-cta { font-size: clamp(40px, 11vw, 88px); }
 }
-.contact-link:last-child { border-bottom: 1px solid color-mix(in oklab, var(--bg) 18%, transparent); }
+.contact-link:last-child { border-bottom: 1px solid color-mix(in oklab, var(--contact-fg) 18%, transparent); }
 .contact-link:hover {
   padding-left: 16px;
   color: var(--accent);
@@ -893,7 +899,7 @@ section {
 .contact-link .k {
   font-family: var(--mono);
   font-size: 11px;
-  color: color-mix(in oklab, var(--bg) 50%, transparent);
+  color: color-mix(in oklab, var(--contact-fg) 50%, transparent);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -910,20 +916,20 @@ section {
 .contact-side {
   font-family: var(--mono);
   font-size: 12px;
-  color: color-mix(in oklab, var(--bg) 60%, transparent);
+  color: color-mix(in oklab, var(--contact-fg) 60%, transparent);
   letter-spacing: 0.04em;
   line-height: 1.8;
 }
-.contact-side b { color: var(--bg); font-weight: 500; }
+.contact-side b { color: var(--contact-fg); font-weight: 500; }
 .contact-side .download {
   margin-top: 24px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 14px 22px;
-  border: 1px solid color-mix(in oklab, var(--bg) 30%, transparent);
+  border: 1px solid color-mix(in oklab, var(--contact-fg) 30%, transparent);
   border-radius: 999px;
-  color: var(--bg);
+  color: var(--contact-fg);
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.04em;
@@ -938,10 +944,10 @@ section {
 .contact-foot {
   margin-top: 96px;
   padding-top: 24px;
-  border-top: 1px solid color-mix(in oklab, var(--bg) 18%, transparent);
+  border-top: 1px solid color-mix(in oklab, var(--contact-fg) 18%, transparent);
   font-family: var(--mono);
   font-size: 11px;
-  color: color-mix(in oklab, var(--bg) 50%, transparent);
+  color: color-mix(in oklab, var(--contact-fg) 50%, transparent);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   display: flex;

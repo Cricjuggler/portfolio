@@ -24,13 +24,8 @@
       setTheme(next);
     });
   }
-  // Track OS-level changes only if the user hasn't explicitly chosen.
-  const mql = window.matchMedia('(prefers-color-scheme: dark)');
-  mql.addEventListener?.('change', (e) => {
-    let saved = null;
-    try { saved = localStorage.getItem('theme'); } catch (e2) {}
-    if (!saved) setTheme(e.matches ? 'dark' : 'light', false);
-  });
+  // OS-preference listener intentionally removed — light is the brand default;
+  // the user opts into dark explicitly via the toggle, and that choice persists.
 
   /* ---------- Scroll progress + nav .scrolled ---------- */
   const progressEl = $('#scroll-progress');

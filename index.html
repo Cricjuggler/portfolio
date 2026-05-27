@@ -27,13 +27,14 @@
 
 <script>
   // Inline theme bootstrap — runs before paint to prevent flash.
+  // Light is the default; OS prefers-color-scheme is intentionally ignored —
+  // the editorial cream identity is the brand surface. Users who want dark
+  // can flip the toggle and their choice persists.
   (() => {
     try {
       const saved = localStorage.getItem('theme');
-      const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = saved || (sysDark ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    } catch (e) { /* localStorage blocked — fall through to default light */ }
+      document.documentElement.setAttribute('data-theme', saved || 'light');
+    } catch (e) { /* localStorage blocked — falls through to default light via the attr below */ }
   })();
 </script>
 </head>
