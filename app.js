@@ -41,7 +41,7 @@
   window.addEventListener('scroll', updateScrollUI, { passive: true });
 
   /* ---------- Active section in nav ---------- */
-  const sectionIds = ['work', 'projects', 'writing', 'contact'];
+  const sectionIds = ['work', 'projects', 'contact'];
   const sectionEls = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
   const linkMap = new Map(
     $$('#nav-links a').map((a) => [a.getAttribute('href').slice(1), a])
